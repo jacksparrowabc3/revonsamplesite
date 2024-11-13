@@ -1,0 +1,66 @@
+[
+    {
+      "image": "images/PassionPro.webp",
+      "title": "Commuter Bike",
+      "price": 50,
+      "advance": 20,
+      "description": "Perfect for daily commuting."
+    },
+    {
+      "image": "images/Shine.jpg",
+      "title": "Commuter Bike",
+      "price": 60,
+      "advance": 25,
+      "description": "Lightweight and easy to ride."
+    },
+    {
+      "image": "images/Splendor.avif",
+      "title": "Commuter Bike",
+      "price": 55,
+      "advance": 20,
+      "description": "Comfortable for long rides."
+    },
+    {
+      "image": "images/Ntorq.jpg",
+      "title": "Scooter",
+      "price": 30,
+      "advance": 15,
+      "description": "Perfect for short commutes."
+    },
+    {
+      "image": "images/RayZ.webp",
+      "title": "Scooter",
+      "price": 35,
+      "advance": 18,
+      "description": "Stylish and fast scooter."
+    },
+    {
+      "image": "images/Dio.jpg",
+      "title": "Scooter",
+      "price": 32,
+      "advance": 16,
+      "description": "Easy to handle and fuel-efficient."
+    },
+    {
+      "image": "images/Duke390.jpg",
+      "title": "Sport Bike",
+      "price": 100,
+      "advance": 50,
+      "description": "For thrill seekers and performance lovers."
+    },
+    {
+      "image": "R15.jpg",
+      "title": "Sport Bike",
+      "price": 120,
+      "advance": 60,
+      "description": "High-speed bike for adrenaline junkies."
+    },
+    {
+      "image": "images/Hornet.jpg",
+      "title": "Sport Bike",
+      "price": 110,
+      "advance": 55,
+      "description": "Race-ready and built for speed."
+    }
+  ]
+  

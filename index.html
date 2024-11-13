@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+
+    <header class="hero">
+        <!-- First Logo on the Left -->
+        <img src="C:/Users/admin/Desktop/LikeAcko/NewLogo.png" alt="Bike Rental Logo 1" class="logo logo-left">
+        
+        <!-- Second Logo on the Right -->
+        <img src="C:/Users/admin/Desktop/LikeAcko/WrittenLogo.png" alt="Bike Rental Logo 2" class="logo logo-right">
+        
+        
+        <!-- Profile Box with Dropdown -->
+        <div class="profile-box">
+            <span class="profile-status">
+                <img src="Profilephoto.png" alt="Profile" class="profile-img">
+                Nagaraju V <!-- Profile Name -->
+            </span>
+            <div class="dropdown">
+                <button class="dropdown-btn">&#9662;</button>
+                <div class="dropdown-content">
+                    <a href="profile-settings.html">Profile Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    
+
+<!-- Product Section -->
+<section id="product-section" class="product-section">
+    <!-- The product boxes will be dynamically inserted here -->
+</section>
+
+
+
+<script>
+    // Function to create a new product box
+    function createProductBox(imageSrc, title, price, advance, description) {
+        const productBox = document.createElement("div");
+        productBox.classList.add("product-box");
+
+        productBox.innerHTML = `
+            <img src="${imageSrc}" alt="${title}" class="product-image">
+            <div class="product-details">
+                <h3>${title}</h3>
+                <p class="price">$${price}/day</p>
+                <p class="advance">Advance: $${advance}</p>
+                <p class="description">${description}</p>
+            </div>
+        `;
+
+        return productBox;
+    }
+
+    // Fetch product data from products.json
+    fetch('products.json')
+        .then(response => response.json())
+        .then(products => {
+            const productSection = document.getElementById("product-section");
+
+            // Loop through the products and create boxes dynamically
+            products.forEach(product => {
+                const newProductBox = createProductBox(
+                    product.image,
+                    product.title,
+                    product.price,
+                    product.advance,
+                    product.description
+                );
+                productSection.appendChild(newProductBox);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading product data:', error);
+        });
+</script>
+    <!-- Services Section -->
+    <section class="services">
+        <div class="service">
+            <h2>Affordable Rates</h2>
+            <p>Get the best prices for your rental needs.</p>
+        </div>
+        <div class="service">
+            <h2>At Your Place</h2>
+            <p>Get your bike delivered to you quickly and for free.</p>
+        </div>
+        <div class="service">
+            <h2>Quality Bikes</h2>
+            <p>Choose from a range of well-maintained bikes.</p>
+        </div>
+    </section>
+
+<!-- 9 Separate Boxes Section -->
+<section class="product-section">
+    <div class="product-box">
+        <img src="C:/Users/admin/Desktop/LikeAcko/PassionPro.webp" alt="Commuter Bike 1" class="product-image">
+        <div class="product-details">
+            <h3>Commuter Bike</h3>
+            <p class="price">$50/day</p>
+            <p class="advance">Advance: $20</p>
+            <p class="description">Perfect for daily commuting.</p>
+        </div>
+    </div>
+    <div class="product-box">
+        <img src="C:/Users/admin/Desktop/LikeAcko/Shine.jpg" alt="Commuter Bike 2" class="product-image">
+        <div class="product-details">
+            <h3>Commuter Bike</h3>
+            <p class="price">$60/day</p>
+            <p class="advance">Advance: $25</p>
+            <p class="description">Lightweight and easy to ride.</p>
+        </div>
+    </div>
+    <div class="product-box">
+        <img src="Splendor.avif" alt="Commuter Bike 3" class="product-image">
+        <div class="product-details">
+            <h3>Commuter Bike</h3>
+            <p class="price">$55/day</p>
+            <p class="advance">Advance: $20</p>
+            <p class="description">Comfortable for long rides.</p>
+        </div>
+    </div>
+    <div class="product-box">
+        <img src="Ntorq.jpg" alt="Scooter 1" class="product-image">
+        <div class="product-details">
+            <h3>Scooter</h3>
+            <p class="price">$30/day</p>
+            <p class="advance">Advance: $15</p>
+            <p class="description">Perfect for short commutes.</p>
+        </div>
+    </div>
+    <div class="product-box">
+        <img src="RayZ.webp" alt="Scooter 2" class="product-image">
+        <div class="product-details">
+            <h3>Scooter</h3>
+            <p class="price">$35/day</p>
+            <p class="advance">Advance: $18</p>
+            <p class="description">Stylish and fast scooter.</p>
+        </div>
+    </div>
+    <div class="product-box">
+        <img src="Dio.jpg" alt="Scooter 3" class="product-image">
+        <div class="product-details">
+            <h3>Scooter</h3>
+            <p class="price">$32/day</p>
+            <p class="advance">Advance: $16</p>
+            <p class="description">Easy to handle and fuel-efficient.</p>
+        </div>
+    </div>
+    <div class="product-box">
+        <img src="Duke390.jpg" alt="Sport Bike 1" class="product-image">
+        <div class="product-details">
+            <h3>Sport Bike</h3>
+            <p class="price">$100/day</p>
+            <p class="advance">Advance: $50</p>
+            <p class="description">For thrill seekers and performance lovers.</p>
+        </div>
+    </div>
+    <div class="product-box">
+        <img src="R15.jpg" alt="Sport Bike 2" class="product-image">
+        <div class="product-details">
+            <h3>Sport Bike</h3>
+            <p class="price">$120/day</p>
+            <p class="advance">Advance: $60</p>
+            <p class="description">High-speed bike for adrenaline junkies.</p>
+        </div>
+    </div>
+    <div class="product-box">
+        <img src="Hornet.jpg" alt="Sport Bike 3" class="product-image">
+        <div class="product-details">
+            <h3>Sport Bike</h3>
+            <p class="price">$110/day</p>
+            <p class="advance">Advance: $55</p>
+            <p class="description">Race-ready and built for speed.</p>
+        </div>
+    </div>
+</section>
+
+    
+
+    <!-- Quote Form Section -->
+    <section id="get-quote" class="quote-section">
+        <h2>Get a Free Quote</h2>
+        <form id="quote-form">
+            <label for="pickup-location">Pickup Location</label>
+            <input type="text" id="pickup-location" name="pickup-location" required>
+
+            <label for="rental-duration">Rental Duration</label>
+            <select id="rental-duration" name="rental-duration">
+                <option value="1 day">1 Day</option>
+                <option value="3 days">3 Days</option>
+                <option value="1 week">1 Week</option>
+            </select>
+
+            <button type="submit" class="cta-button">Get Quote</button>
+        </form>
+    </section>
+
+</body>
+</html>

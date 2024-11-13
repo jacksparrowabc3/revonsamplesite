@@ -1,0 +1,311 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f8cd20;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.cta-button {
+    background-color: #ffb703;
+    color: #333;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.hero:hover .cta-button {
+    background-color: #ff8c00;
+}
+
+.logo-left {
+    width: 100px;
+}
+
+.logo-right {
+    width: 300px;
+    position: absolute;
+    left: 23%;
+    transform: translateX(-50%);
+}
+
+/* Navigation Menu */
+.navbar {
+    background-color: #333;
+    text-align: center;
+    padding: 1rem;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #f8cd20;
+    border-radius: 5px;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.service {
+    text-align: center;
+    width: 200px;
+}
+
+.service h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.service p {
+    color: #555;
+}
+
+/* Full-Sized Image */
+.full-image-img {
+    width: 100%;
+    display: block;
+}
+
+/* Categories Section */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 2rem;
+    background-color: #000;
+    color: white;
+}
+
+.category {
+    width: 30%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-images {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.category-images img {
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s;
+}
+
+.category-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Image Scrolling Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Product Section */
+.product-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 3rem 2rem;
+}
+
+.product-box {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-details h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.price {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.advance {
+    color: #0070f3;
+}
+
+.description {
+    color: #555;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .product-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Profile Status and Dropdown */
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.profile-box:hover {
+    background-color: #e0e0e0;
+}
+
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.profile-status {
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.dropdown-btn {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Display dropdown on hover */
+.profile-box:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}

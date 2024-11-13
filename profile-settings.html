@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings</title>
+    <link rel="stylesheet" href="profile-settings.css">
+</head>
+<body>
+
+<div class="settings-container">
+    <h2>Profile Settings</h2>
+
+    <!-- Profile Picture -->
+    <div class="form-group">
+        <label for="profile-pic">Profile Picture</label>
+        <img src="profile-photo.jpg" alt="Profile Picture" id="current-profile-pic">
+        <input type="file" id="profile-pic" name="profile-pic">
+    </div>
+
+    <!-- Username -->
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" value="John Doe">
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" value="johndoe@example.com">
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter a new password">
+    </div>
+
+    <!-- Save Button -->
+    <button class="save-button" onclick="saveProfile()">Save Changes</button>
+</div>
+
+<script>
+    function saveProfile() {
+        alert("Profile settings saved successfully!");
+        // Here you can add code to handle saving the profile settings.
+    }
+</script>
+
+</body>
+</html>
